@@ -1,0 +1,35 @@
+<div class="h-full">
+  <div class="flex justify-center mt-10 self-centered" >
+    <div class="w-full max-w-xs">
+      <div class="px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md">
+        <%= simple_form_for @daily_workout do |form| %>
+          <fieldset class="text-indigo-500">
+          <%= form.input :focus %>
+          </fieldset>
+            <%= form.simple_fields_for :lifts do |lift| %>
+              <div id="fieldsetContainer">
+              <fieldset id='0' class="text-indigo-500">
+              <%= lift.input :name %>
+              <%= lift.input :sets %>
+              <%= lift.input :reps %>
+              </div>
+            </fieldset>
+          <% end %>
+            
+          <%= form.submit %>
+        <% end %>
+        <br />
+        <button id="addWorkout" onclick="addWorkout()" class="px-4 py-2 font-bold text-white bg-indigo-500 rounded-full hover:bg-indigo-700 font-bould">Add Lift</button>
+      </div>
+    </div>
+</div>
+
+
+<script>
+  const addWorkout = () => {
+   const lastId = document.querySelector("#fieldsetContainer").lastElementChild.id
+   const newId = parseInt(lastId, 10) + 1;
+   const newFieldset = document.querySelector("[id='0']").outerHTML.replace(/0/g, newId);
+   document.querySelector("#fieldsetContainer").insertAdjacentHTML('beforeend', newFieldset)
+  }
+</script>
