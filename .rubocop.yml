@@ -3,13 +3,14 @@
 # AllCops
 AllCops:
   Exclude:
-    - 'vendor/**/*' # Exclude vendor directory 
+    - 'vendor/**/*' # Exclude vendor directory
     - 'spec/**/*'
     - 'config/**/*'
     - 'bin/**/*'
     - 'db/migrate/**/*'
     - 'config.ru'
     - 'Rakefile'
+    - 'db/schema.rb'
 # Style/Documentation
 Style/Documentation:
   Enabled: false
@@ -27,8 +28,9 @@ Naming/FileName:
     - 'config/**/*'
     - 'spec/**/*'
     - 'config.ru'
+    - 'db/schema.rb'
 
-    
+
 # Metrics/MethodLength
 Metrics/MethodLength:
   Max: 15

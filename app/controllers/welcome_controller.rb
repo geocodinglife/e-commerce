@@ -1,5 +1,4 @@
 class WelcomeController < ApplicationController
-  def index
-    @a = 1
-  end
+  layout 'landing', only: %i[index]
+  def index; end
 end

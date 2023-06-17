@@ -1,19 +1,17 @@
-<div class="absolute top-0 left-0 right-0 z-50 flex flex-col px-4 mx-auto bg-transparent max-w-screen-xl md:items-center md:justify-between md:flex-row md:px-6 lg-px-8">
+<div class="top-0 left-0 right-0 z-50 flex flex-col mx-auto max-w-screen-xl md:items-center md:justify-between md:flex-row md:px-6 lg-px-8 text-blue-500 bg-gray-900">
   <div class="flex flex-row items-center justify-between p-4">
     <%= link_to "Thoughts and Fitness", root_path, class: 'text-lg font-semibold tracking-widest
                                                             text-white uppercase rounded-lg
                                                             focus:outline-none focus:shadow-outline' %>
   </div>
-    <% nav_item_class="px- py-2 mt-2 text-sm font-semibold text-white
+  <% nav_item_class="px- py-2 mt-2 text-sm font-semibold text-white
                        rounded-lg md:mt-0 md:ml-4 hover:text-gray-900
                        focus:text-gray-900 hover:bg-gray-200
                        focus:bg-gray-20 focus:outline-none focus:shadow-outline" %>
-
-  <nav class="flex-col flex-grow hidden pb-4 bg-transparent md:pb-0 md:flex md:justify-end md:flex-row">
+  <nav class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
     <%= link_to "Get Started", root_path, class: nav_item_class %>
-    <%= link_to "Montly workout Plans", root_path, class: nav_item_class %>
-    <%= link_to "Login", root_path, class: nav_item_class%>
+    <%= link_to "Monthly Workout Plans", root_path, class: nav_item_class %>
+    <%= link_to "Login", root_path, class: nav_item_class %>
     <%= link_to "Add Daily Workouts", new_daily_workout_path, class: nav_item_class %>
   </nav>
-</div>
 </div>
