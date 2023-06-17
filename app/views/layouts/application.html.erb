@@ -14,6 +14,20 @@
 
   <body>
       <%= render 'layouts/nav' %>
+      <% flash.each do |message_type, message| %>
+        <div class="big-<%= message_type %>">
+          <div class="px-3 py-3 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between">
+              <div class="w-0 flex-1 flex items-center">
+                <p class="ml-3 font-medium text-white truncate">
+                  <%= message %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
       <%= yield %>
   </body>
 </html>
